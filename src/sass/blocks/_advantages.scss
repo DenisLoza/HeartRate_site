@@ -1,0 +1,36 @@
+.advantages {
+    min-height: 470px;
+    padding: 70px 0 80px 0;
+    background-color: #f6f6f6;
+    &__wrapper {
+        margin-top: 65px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 247px; /* Задаем ширину текста под иконками */
+        height: 81px;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        color: #0d0d0d;
+        span {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        img {
+            display: block; /* Делаем иконку блочным элементом */
+            margin: 0 auto; /* Выравниваем иконку по-центру */
+            margin-bottom: 38px;
+        }
+        a {
+            color: #ff0000;;
+            text-transform: uppercase;
+            text-decoration: underline; /* Устанавливает всегда подчеркнутый текст  */
+        }
+    }
+}

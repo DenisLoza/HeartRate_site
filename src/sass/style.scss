@@ -1,0 +1,17 @@
+@import 'base/variables'; /* Подключаем переменные */
+
+* {
+    font-family: 'Museo Sans Cyrl', sans-serif; /* Подключаем шрифт для всех элементов вэб-страницы */
+}
+
+.container { /* Описываем контейнер */
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Подключаем блоки */
+@import 'blocks/promo';
+@import 'blocks/header.scss';
+@import 'blocks/buttons';
+@import 'blocks/advantages';
+@import 'blocks/titles';

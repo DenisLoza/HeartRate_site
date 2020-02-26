@@ -1,0 +1,57 @@
+.promo {
+    min-height: 650px;
+    padding: 21px 0 93px 0;
+    background: url('../../img/main.jpg') center (center/cover) no-repeat;
+    &__wrapper { 
+        display: flex; /* Обертка будет флексом */
+        flex-direction: column; /* Расположение флексов колоночное */
+        align-items: flex-end; /* Элементы внутри флекса выравниваются по правому краю */
+        margin-top: 90px; /* Отступ обертки от верхней кнопки */
+    }
+    &__header {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    &__subheader {
+        margin-top: 17px;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    &__icons {
+        margin-top: 65px;
+        width: 425px; /* Задаем ширину блока с иконками */
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__icon {
+        width: 108px; /* Задаем ширину текста под иконками */
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        color: #ffffff;
+        img {
+            display: block; /* Делаем иконку блочным элементом */
+            margin: 0 auto; /* Выравниваем иконку по-центру */
+            margin-bottom: 15px;
+        }
+    }
+    &__link { /*  ССЫЛКА Перейти в каталог */
+        margin-top: 18px;
+        font-size: 16px;
+        font-weight: normal;
+        color: #ffffff;
+        a {
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: underline; /* Устанавливает всегда подчеркнутый текст  */
+        }
+    }
+
+}
