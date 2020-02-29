@@ -29,5 +29,26 @@
             height: 50px;
         }
     }
-    
+    .slick-dots { /* Стилизуем отображение точек навигации в слайдере-карусели */
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        line-height: 1.2;
+        li {
+            margin: 0 20px;
+        }
+        button {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%; /* Делаем круги из квадратных кнопок */
+        }
+        .slick-active {
+            button {
+                background-color: #c70101; /* Цвет заливки активной кнопки */
+                color: #fff;
+            }
+        }
+    }
+
 }
