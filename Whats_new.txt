@@ -1,8 +1,11 @@
+29-02-2020:
+- add carousel section (JQuary Slick) 
+
 28-02-2020:
--  add consultation page (for form PUSH)
+-  add consultation section (for form PUSH)
 
 26-02-2020:
-- add advantages page
+- add advantages section
 
 25-02-2020:
 NEW PROGECT with GULP and BEM.
