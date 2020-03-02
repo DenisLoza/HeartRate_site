@@ -1,0 +1,173 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0; /* Убираем отступы по-умолчанию из тэга UL */
+        padding-left: 0; /* Убираем отступы по-умолчанию из тэга UL */
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6d6d6d;
+        font-size: 18px;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 5px; /* Отступы между блоками */
+        line-height: 48px; /* Выравниваем текст внутри блоков по-центру вертикали, межстрочный интервал равен размеру блока */
+        transform: skewX(-25deg); /* Наклоняем прямоугольные блоки */
+        cursor: pointer; /* Отображение указателя нажатия при наведении на блок мышью */
+        transition: 0.2s all;
+        &:hover { /* При наведении мыши на кнопку включается красная тень */
+            box-shadow: 3px 3px 20px $main-color;
+            border: none;
+        }
+        div { /* Обертка для текста в блоке */
+            transform: skewX(25deg); /* Исправляем трансформацию текста и делаем его прямым */
+        }
+        &_active { /* Активный блок */
+            color: #fff;
+            background-color: $main-color;
+            border: none;
+        }
+    }
+    &__content { /* Общая объединяющая оболочка для всех карточек товаров */
+        margin-top: 60px;
+        display: none; /* По-умолчанию весь контент скрыт, пока он не активен */
+        justify-content: space-between;
+        flex-wrap: wrap; /* Флексы выстраиваются в несколько строк. Карточки переходят на новую строку, когда по ширине они не помещаются в контейнер */
+        &_active {
+            display: flex;
+        }
+    }
+    &-item { /* Содержимое карточек товара */
+        width: 300px;
+        min-height: 440px;
+        border: solid 2px #e8e8e8;
+        padding: 20px 20px 26px 20px;
+        margin-bottom: 20px;
+        overflow: hidden; /* Отображается только область внутри элемента item, остальное будет скрыто. */
+        &__img {
+            max-width: 100%; /* Картинка вне зависимости от размера всегда будет занимать не более размера контейнера */
+            height: 200px;
+            display: block; /* Делаем картинку блочным элементом */
+            margin: 0 auto; /* Выравниваем картинку по центру */
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            color: #0d0d0d;
+        }
+        &__descr {
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+        }
+        &__link {
+            display: block; /* Делаем ссылку блочной, чтобы в дальнейшем применить выравнивание */
+            margin-top: 17px;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            color: $main-color;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                color:$main-color;
+            }
+        }
+        hr { /* Полоса разделителя */
+            background-color: #e8e8e8;
+            margin-top: 19px;
+            margin-bottom: 21px;
+            border-bottom: none; /* Для того, чтобы полоса была высотой ровно 1рх */
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Выравнивание по-горизонтали */
+        }
+        &__prices { /* Стилизуем цены в прайсе */
+            &__old {
+                font-size: 14px;
+                font-weight: 300;
+                text-align: left;
+                color: #555555;
+                text-decoration: line-through;
+            }
+            &__new {
+                font-size: 20px;
+                font-weight: 700;
+                text-align: left;
+                color: #050505;
+            }
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content { /* Контент с картинкой товара */
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%); /* Когда этот блок неактивен, он смещен влево по оси Х и находится физически вне item */
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%); /* Когда активен этот блок, он внутри item */
+                margin-right: 20px;
+            }
+        }
+        &__list { /* Контент с описанием товара */
+            width: 50%;
+            margin-left: 20px;
+            padding-right: 20px;
+            transform: translateX(0%); /* Когда этот блок неактивен, он смещен вправо по оси Х и находится физически вне item */
+            transition: 0.5s all;
+            padding-left: 20px; /* Добавляем отступ для красных точек (псевдоэлементов) */
+            margin-bottom: 0; /* Избавляемся от стилей по-умолчанию для UL */
+            list-style-type: none; /* Отменяем маркеры для UL */
+            &_active {
+                transform: translateX(-100%); /* Когда активен этот блок, он внутри item */
+                margin-left: 0px;
+            }
+        }
+        li { /* Стили для списка list */
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: left;
+            color: #555555;
+            &:before { /* Псевдоэлемент перед каждым элементом списка красная точка */
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $main-color;
+                left: -14px;
+                top: 7px;
+            }
+        }
+        &__back { /* Ссылка НАЗАД в карточке */
+            position: absolute; /* Для того, чтобы позиция не зависела от контентат карточки */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 20px)); /* Выравниваем по-середине, т.к. слева есть отступ в 20рх */
+            display: block;
+            color: $main-color;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}

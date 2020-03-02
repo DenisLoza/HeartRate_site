@@ -45,7 +45,7 @@
         }
         .slick-active {
             button {
-                background-color: #c70101; /* Цвет заливки активной кнопки */
+                background-color: $main-color; /* Цвет заливки активной кнопки */
                 color: #fff;
             }
         }

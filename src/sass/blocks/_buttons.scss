@@ -20,8 +20,12 @@
     &_submint { /* Кнопка для отправки форм */
         width: 100%;
         height: 55px;
-        border-radius: 5px;
-        background-color: #c70101;
+        background-color: $main-color;
         font-size: 16px;
+    }
+    &_mini { /* Кнопка в каталоге карточек прайс */
+        width: 131px;
+        height: 40px;
+        font-size: 14px;
     }
 }

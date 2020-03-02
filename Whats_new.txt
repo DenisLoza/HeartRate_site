@@ -1,3 +1,8 @@
+02-03-2020:
+- add catalog section
+  (JQuary Tabs for swich)
+  (JS for card switching more-back)
+
 29-02-2020:
 - add carousel section (JQuary Slick) 
 
