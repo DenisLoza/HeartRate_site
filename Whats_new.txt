@@ -1,3 +1,6 @@
+04-03-2020:
+- add reviews section
+
 02-03-2020:
 - add catalog section
   (JQuary Tabs for swich)
