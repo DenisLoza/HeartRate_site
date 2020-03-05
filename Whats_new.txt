@@ -1,3 +1,7 @@
+05-03-2020:
+- add footer section
+(Google maps frame)
+
 04-03-2020:
 - add reviews section
 
