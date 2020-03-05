@@ -23,7 +23,7 @@ $(document).ready(function(){ /* СЛАЙДЕР КАРУСЕЛЬ */
           .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
-    /* Скрип для переключения контента внутри карточки товара ПОДРОБНЕЕ -- НАЗАД */
+    /* Скрипт для переключения контента внутри карточки товара ПОДРОБНЕЕ -- НАЗАД */
     function toggleSlide(item) {
         $(item).each(function(i) {
             $(this).on('click', function(e) {
@@ -36,5 +36,33 @@ $(document).ready(function(){ /* СЛАЙДЕР КАРУСЕЛЬ */
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+
+
+    /* МОДАЛЬНЫЕ ОКНА */
+
+    /* Первое модальное окно при нажатии на ЗАКАЗАТЬ ЗВОНОК и ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ */
+    $('[data-modal=consultation]').on('click', function() { 
+        $('.overlay, #consultation').fadeIn();
+    });
+
+    /* При нажатии на крестик у мод. окон они закрываются */
+    $('.modal__close').on('click', function() { 
+        $('.overlay, #consultation, #thanks, #order').fadeOut();
+    });
+
+    /* Второе модальное окно при нажатии на КУПИТЬ */
+    $('.button_mini').on('click', function() { 
+        $('.overlay, #order').fadeIn();
+    });
+
+
+    /* Подставляет название товара во Второе модальное окно при нажатии на КУПИТЬ */
+    $('.button_mini').each(function(i) { 
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); /* Вытаскиваем название товара из карточки товара */
+            $('.overlay, #order').fadeIn();
+        });
+    });
 
 });
