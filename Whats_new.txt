@@ -1,3 +1,7 @@
+07-03-2020:
+- add form validation
+  (JQuery jqueryvalidation.org)
+
 05-03-2020:
 - add footer section
   (Google maps frame)
@@ -9,12 +13,12 @@
 
 02-03-2020:
 - add catalog section
-  (JQuary Tabs for swich)
+  (JQuery Tabs for swich)
   (JS for card switching more-back)
 
 29-02-2020:
 - add carousel section
-  (JQuary Slick) 
+  (JQuery Slick) 
 
 28-02-2020:
 - add consultation section

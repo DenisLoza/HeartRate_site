@@ -65,4 +65,37 @@ $(document).ready(function(){ /* СЛАЙДЕР КАРУСЕЛЬ */
         });
     });
 
+
+    /* ВАЛИДАЦИЯ ФОРМ JQuary. Обращаемся к трем формам по ID*/
+    
+    function valideForms(form){
+        $(form).validate({
+            rules: { /* Правила проверки для каждой категории */
+                name: {
+                    required: true,
+                    minlength: 2 /* Минимальное кол-во вводимых символов */
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: { /* Форма сообщений при ошибках пользователя */
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите минимально {0} символа!")
+                },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                  required: "Пожалуйста, введите ваш e-mail",
+                  email: "Неправильный адрес почты! Формат: name@domain.com"
+                }
+            }
+        });
+    };
+
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
 });

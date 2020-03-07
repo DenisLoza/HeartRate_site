@@ -39,6 +39,16 @@
     &_mini {
         min-height: 140px;
     }
+    .error { /* Класс от JQuery. Класс сообщений об ошибках при заполнении форм */
+        border: 1px solid red; /* Обводит красным поле ввода с ошибкой */
+    }
+    label.error { /* Сообщения об ошибках */
+        border: none; /* Убирает красную обводку у самих сообщений об ошибках */
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 12px;
+        font-weight: normal;
+    }
 }
 
 #consultation, #order, #thanks { /* ID модальных окон */
