@@ -98,4 +98,8 @@ $(document).ready(function(){ /* СЛАЙДЕР КАРУСЕЛЬ */
     valideForms('#consultation-form');
     valideForms('#consultation form');
     valideForms('#order form');
+
+
+    /* МАСКА ВВОДА НОМЕРА ТЕЛЕФОНА JQuary */
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
 });
