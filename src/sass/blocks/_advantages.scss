@@ -15,6 +15,15 @@
         font-weight: 300;
         text-align: center;
         color: #0d0d0d;
+        &_animation { /* АНИМАЦИЯ ИКОНКИ СЕРДЦА */
+            animation-name: heartbeat;
+            animation-duration: 1.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite; /* Анимация будет повторятся бесконечно */
+            &:hover {
+                animation-play-state: paused; /* При наведении мыши на иконку анимация приостанавливается */
+            }
+        }
         span {
             display: block;
             margin: 0 auto;

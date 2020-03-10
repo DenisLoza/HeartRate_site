@@ -137,6 +137,8 @@ $(document).ready(function(){ /* СЛАЙДЕР КАРУСЕЛЬ */
         return false;
     });
 
+
+    /* АНИМАЦИЯ НА САЙТЕ С ПОМОЩЬЮ animation.css */
     new WOW().init();
 
 });
