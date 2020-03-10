@@ -120,4 +120,23 @@ $(document).ready(function(){ /* СЛАЙДЕР КАРУСЕЛЬ */
         });
         return false;
     });
+
+
+    /* КНОПКА ВВЕРХ САЙТА + ПЛАВНЫЙ СКРОЛ */
+    $(window).scroll(function() { /* Скрипт следит за скролом в окне пользователя */
+        if ($(this).scrollTop() > 1600) { /* Если отступ сверху при скролинге больше 1600px */
+            $('.pageup').fadeIn(); /* Кнопка ссылка вверх появляется */
+        } else {
+            $('.pageup').fadeOut(); /* Если услов. не выполняется кнопка исчезает */
+        }
+    });
+
+    $("a[href^='#']").click(function(){ /* Функция плавного скролинга страницы для локальных ссылок по ID */
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
+
 });
