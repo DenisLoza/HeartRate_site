@@ -130,8 +130,11 @@
             transform: translateX(0%); /* Когда этот блок неактивен, он смещен вправо по оси Х и находится физически вне item */
             transition: 0.5s all;
             padding-left: 20px; /* Добавляем отступ для красных точек (псевдоэлементов) */
-            margin-bottom: 0; /* Избавляемся от стилей по-умолчанию для UL */
-            list-style-type: none; /* Отменяем маркеры для UL */
+            ul {
+                padding: 0; /* Избавляемся от стилей по-умолчанию для UL */
+                margin-bottom: 0; /* Избавляемся от стилей по-умолчанию для UL */
+                list-style-type: none; /* Отменяем маркеры для UL */
+            }
             &_active {
                 transform: translateX(-100%); /* Когда активен этот блок, он внутри item */
                 margin-left: 0px;

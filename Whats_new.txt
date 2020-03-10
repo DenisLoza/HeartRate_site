@@ -4,6 +4,7 @@
 - add pageUp link & smooth scrolling
 - add icon animation CSS3
   (JQuery WOW + animate.css)
+- validation html
 
 09-03-2020:
 - add mask validation for phone number
