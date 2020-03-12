@@ -1,3 +1,10 @@
+/* Подключаем библиотеки */
+@import 'libs/bootstrap-reboot.min'; /* Подключаем из локальной папки СБРОС стилей из Bootstrap */
+@import 'libs/font'; /* Подключаем локальные шрифты woff из папки Fonts */
+@import 'libs/slick';
+@import 'libs/animate'; /* Библиотека анимации на CSS3 */
+
+
 @import 'base/variables'; /* Подключаем переменные */
 @import 'base/animations'; /* Подключаем анимацию CSS3 */
 
