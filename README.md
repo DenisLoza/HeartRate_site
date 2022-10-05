@@ -1,4 +1,4 @@
-# Heart rate shop site (HTML + SASS + JS)
+# Heart rate shop site (HTML + SASS + JS + JQuery)
 
 ## [View The Site](https://denisloza.github.io/HeartRate_site/)
 
